@@ -1,0 +1,58 @@
+{
+  "dataset_id": "sample",
+  "description": "Hand-crafted evaluation dataset for the RAG backend. Replace with real captured transcripts for production benchmarking.",
+  "synthetic": false,
+  "created_at": "2026-05-26T00:00:00Z",
+  "transcripts": [
+    {
+      "id": "sample_001",
+      "source": "BBC_World_Service",
+      "text": "The United Nations Security Council has voted unanimously to extend the peacekeeping mission in Mali for another year. The resolution was passed with all fifteen members voting in favor. The UN Secretary General welcomed the decision, saying it was crucial for stability in the Sahel region. Meanwhile, the humanitarian situation in northern Mali continues to deteriorate, with over two million people in need of food assistance.",
+      "timestamp": "2026-01-15T09:00:00Z"
+    },
+    {
+      "id": "sample_002",
+      "source": "BBC_World_Service",
+      "text": "In economic news, the European Central Bank has held interest rates steady at four point five percent, as widely expected by analysts. ECB President Christine Lagarde signaled that rate cuts could begin in the spring if inflation continues its downward trend. The euro strengthened slightly against the dollar following the announcement. European stock markets ended the day mixed, with the DAX gaining half a percent while the FTSE one hundred fell slightly.",
+      "timestamp": "2026-01-15T09:01:00Z"
+    },
+    {
+      "id": "sample_003",
+      "source": "BBC_World_Service",
+      "text": "Scientists at the European Space Agency have announced the discovery of water ice deposits beneath the surface of Mars. The findings, published in the journal Nature, suggest that significant quantities of frozen water exist just meters below the Martian surface near the equator. This could have major implications for future human missions to Mars, as the water could potentially be extracted for drinking and fuel production. The research team used ground-penetrating radar data from the Mars Express orbiter.",
+      "timestamp": "2026-01-15T09:02:00Z"
+    }
+  ],
+  "qa_pairs": [
+    {"qa_id": "q1", "question": "What did the UN Security Council vote on?",
+     "ground_truth_answer": "The UN Security Council voted unanimously to extend the peacekeeping mission in Mali for another year, with all fifteen members in favor.",
+     "relevant_chunk_ids": ["sample_001"], "type": "factoid"},
+    {"qa_id": "q2", "question": "How many people need food assistance in Mali?",
+     "ground_truth_answer": "Over two million people in northern Mali need food assistance.",
+     "relevant_chunk_ids": ["sample_001"], "type": "factoid"},
+    {"qa_id": "q3", "question": "What is the current ECB interest rate?",
+     "ground_truth_answer": "The ECB held interest rates steady at four point five percent.",
+     "relevant_chunk_ids": ["sample_002"], "type": "factoid"},
+    {"qa_id": "q4", "question": "When could ECB rate cuts begin?",
+     "ground_truth_answer": "Christine Lagarde signaled that rate cuts could begin in the spring if inflation continues its downward trend.",
+     "relevant_chunk_ids": ["sample_002"], "type": "factoid"},
+    {"qa_id": "q5", "question": "What was discovered on Mars?",
+     "ground_truth_answer": "Scientists at ESA discovered water ice deposits beneath the Martian surface near the equator.",
+     "relevant_chunk_ids": ["sample_003"], "type": "factoid"},
+    {"qa_id": "q6", "question": "What are the main topics in the news?",
+     "ground_truth_answer": "Three main topics: UN extending Mali peacekeeping mission, ECB holding interest rates steady, and ESA discovering water ice on Mars.",
+     "relevant_chunk_ids": ["sample_001", "sample_002", "sample_003"], "type": "summary"},
+    {"qa_id": "q7", "question": "How did European markets perform?",
+     "ground_truth_answer": "European markets ended mixed: DAX gained half a percent, FTSE 100 fell slightly.",
+     "relevant_chunk_ids": ["sample_002"], "type": "factoid"},
+    {"qa_id": "q8", "question": "What instrument was used to find water on Mars?",
+     "ground_truth_answer": "Ground-penetrating radar data from the Mars Express orbiter.",
+     "relevant_chunk_ids": ["sample_003"], "type": "factoid"},
+    {"qa_id": "q9", "question": "Did the BBC cover any climate change news?",
+     "ground_truth_answer": "The available transcripts do not contain information about climate change.",
+     "relevant_chunk_ids": [], "type": "unanswerable"},
+    {"qa_id": "q10", "question": "What happened to the euro after the ECB decision?",
+     "ground_truth_answer": "The euro strengthened slightly against the dollar.",
+     "relevant_chunk_ids": ["sample_002"], "type": "factoid"}
+  ]
+}

@@ -1,0 +1,9 @@
+[project]
+name = "streaming-rag"
+version = "2.0.0"
+description = "Question answering over a live audio stream: hybrid retrieval, faithfulness checks, and statistically sound evaluation"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

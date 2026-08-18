@@ -1,0 +1,21 @@
+# API
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pydantic-settings>=2.1
+httpx>=0.25                 # radio stream proxy
+
+# Local models: speech-to-text, embeddings, reranker, NLI
+faster-whisper>=1.0
+sentence-transformers>=3.0
+
+# Retrieval
+chromadb>=0.5
+rank-bm25>=0.2.2
+
+# LLM providers (free tiers)
+google-genai>=1.0
+groq>=0.4
+
+# Evaluation + tests
+scipy>=1.11                 # Wilcoxon signed-rank test
+pytest>=7.4
